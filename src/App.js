@@ -8,23 +8,18 @@ function App() {
 
   let numArray = ["1", "2", "3", "4", "5"];
   let displayHidden = numArray || false;
-  let nameP;
-  
-  if(displayHidden){
-    nameP = <p>Terence</p> 
-  }else{
-    nameP = <p>Donald</p>
-  }
-
+ 
   //map function as a higher order function which created <p> JSX
   let message = numArray.map((num) => {
-    return <p>{num}</p>;
+    return <p key={num}>{num}</p>;
   });
 
   //function (expression) is defined here
   const parentFunction = (text) => {
     console.log(text);
   };
+
+  // TODO: This thing
 
   return (
     <div className="App">
